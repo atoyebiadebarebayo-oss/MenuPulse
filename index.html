@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ade Bistro — Digital Menu & WhatsApp Ordering</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <i class="fa-solid fa-utensils"></i> Ade<span>Bistro</span>
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle-btn" class="btn-icon" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="open-cart-btn" class="btn btn-primary cart-badge-btn">
+          <i class="fa-solid fa-cart-shopping"></i> Cart
+          <span id="cart-count" class="badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner & Search -->
+  <section class="hero-banner">
+    <div class="banner-container">
+      <span class="table-badge"><i class="fa-solid fa-qrcode"></i> Ade's Reserved Table #04</span>
+      <h1>Ade Special Kitchen & Grill</h1>
+      <p>Select your favorite dishes created by Chef Ade and order directly via WhatsApp.</p>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="menu-search" placeholder="Search Ade specials, rice, drinks...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Categories -->
+  <nav class="category-nav">
+    <div class="category-container">
+      <button class="cat-btn active" data-category="all">All Items</button>
+      <button class="cat-btn" data-category="mains">Ade Mains</button>
+      <button class="cat-btn" data-category="pizza">Ade Pizza & Pasta</button>
+      <button class="cat-btn" data-category="drinks">Beverages</button>
+      <button class="cat-btn" data-category="desserts">Desserts</button>
+    </div>
+  </nav>
+
+  <!-- Main Menu Grid -->
+  <main class="menu-section">
+    <div class="menu-container" id="menu-grid"></div>
+  </main>
+
+  <!-- Cart Drawer / Modal -->
+  <div id="cart-modal" class="modal-overlay">
+    <div class="cart-drawer">
+      <div class="drawer-header">
+        <h3><i class="fa-solid fa-basket-shopping"></i> Ade Bistro Order</h3>
+        <button id="close-cart-btn" class="close-btn">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="form-group">
+          <label for="table-num"><i class="fa-solid fa-chair"></i> Table / Customer Name *</label>
+          <input type="text" id="table-num" value="Ade - Table #04" placeholder="e.g. Ade / Table 04">
+        </div>
+
+        <div id="cart-items-container" class="cart-items-list">
+          <p class="empty-cart-msg">Your cart is currently empty.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="special-notes"><i class="fa-solid fa-note-sticky"></i> Special Instructions for Chef Ade</label>
+          <textarea id="special-notes" rows="2" placeholder="e.g. Extra spicy, serve Ade special sauce on the side..."></textarea>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <div class="summary-line">
+          <span>Subtotal:</span>
+          <strong id="cart-subtotal">$0.00</strong>
+        </div>
+        <button id="send-whatsapp-order-btn" class="btn btn-success btn-block btn-lg">
+          <i class="fa-brands fa-whatsapp"></i> Send Order to 07040416469
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
