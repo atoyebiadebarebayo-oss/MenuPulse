@@ -9,7 +9,7 @@ MenuPulse is a lightweight digital menu and instant order routing platform built
 
 ## 🚀 Live Demo
 
-Explore the live workspace here: **[https://promptpulses.netlify.app]*
+Explore the live workspace here: **[https://menupulse.netlify.app]*
 
 
 ## ✨ Features
